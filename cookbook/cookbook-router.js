@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 router.get('/:id/shoppingList', (req, res) => {
     Cookbook.getShoppingList(req.params.id)
     .then(list => {
-        if (list) {
+        if (list.length > 0 ) {
             res.json(list);
         } else {
             res.status(404).json({ message: 'Recipe not found.'})
@@ -33,7 +33,7 @@ router.get('/:id/shoppingList', (req, res) => {
 router.get('/:id/instructions', (req, res) => {
     Cookbook.getInstructions(req.params.id)
     .then(inst => {
-        if (inst) {
+        if (inst.length > 0) {
             res.json(inst);
         } else {
             res.status(404).json({ message:'Instructions not found.' })
