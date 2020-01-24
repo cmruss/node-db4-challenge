@@ -6,6 +6,6 @@ exports.seed = function(knex) {
         {id: 2, name: 'milk', units: 'cups'},
         {id: 3, name: 'butter',units: 'pats'},
         {id: 4, name: 'cereal', units: 'cups'},
-        {id: 5, name: 'bread', units:'slices'}
+        {id: 5, name: 'bread', units: 'slices'}
       ]);
 };
